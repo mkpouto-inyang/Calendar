@@ -266,9 +266,21 @@ body{
 .fc .fc-event-main {
   padding: 4px 0;
 }
-
-.fc .fc-timegrid-col-frame {
+/* ✅ Fix day number visibility */
+.fc-daygrid-day-number {
+  display: block !important;
+  color: #151c19;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 6px;
 }
+
+/* ✅ Scope styles only to day view */
+.fc-timeGridDay-view .fc-timegrid-axis,
+.fc-timeGridDay-view .fc-scrollgrid-sync-inner {
+  display: none;
+}
+
 .fc-timegrid-slot-lane{
   border-left: 2px solid #020202;
 }
@@ -291,8 +303,8 @@ body{
   margin-top: -40px;
 } */
 
-.fc .fc-timegrid-axis,
-.fc-scrollgrid-sync-inner
-{
-  display: none;
+
+.fc-timeGridDay-view {
+  background-color: #f9faf9;
+  margin-top:-30px;
 }
