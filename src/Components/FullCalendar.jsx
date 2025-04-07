@@ -96,6 +96,10 @@ export default function MyCalendar() {
                 setSelectedDate(next);
                 calendarRef.current.getApi().gotoDate(next);
               }}
+              onDateChange={(date) => {
+                setSelectedDate(date);
+                calendarRef.current.getApi().gotoDate(date);
+              }}
             />
             <FullCalendar
               ref={calendarRef}

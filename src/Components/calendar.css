@@ -200,6 +200,11 @@ body{
     border: none;
   }
 
+  /* Took out that annoying line around the table */
+  .fc .fc-scrollgrid-section{
+    border: none;
+  }
+
   .month-label{
     position: relative;
   }

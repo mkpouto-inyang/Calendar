@@ -19,7 +19,11 @@ export default function MonthDropDown({ selectedDate, onChange }) {
   };
 
   return (
-    <select onChange={handleChange} value={selectedDate.toISOString().slice(0, 10)}>
+    <select
+      className="month-dropdown"
+      onChange={handleChange}
+      value={(selectedDate ?? new Date()).toISOString().slice(0, 10)}
+    >
       {months.map((month) => (
         <option key={month.value} value={month.value}>
           {month.label}

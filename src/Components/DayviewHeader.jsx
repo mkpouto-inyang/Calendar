@@ -1,7 +1,7 @@
-import './DayViewHeader.css'
+import './DayViewHeader.css';
+import MonthDropDown from './MonthDropDown';
 
-
-export default function DayViewHeader({ selectedDate, onPrev, onNext }) {
+export default function DayViewHeader({ selectedDate, onPrev, onNext, onDateChange }) {
     if (!selectedDate) return null; 
   
     const startOfWeek = new Date(selectedDate);
@@ -17,12 +17,19 @@ export default function DayViewHeader({ selectedDate, onPrev, onNext }) {
         isToday: date.toDateString() === selectedDate.toDateString(),
       };
     });
-  
-    const monthLabel = selectedDate.toLocaleString("default", { month: "long" });
-  
+
     return (
       <div className="dayview-header">
-        <h2 className="header-title">Scheduled Meetings</h2>
+        <div className="dayview-top">
+          <h2 className="header-title">Scheduled Meetings</h2>
+          <div className="month-label">
+            <MonthDropDown 
+              selectedDate={selectedDate} 
+              onChange={onDateChange} 
+            />
+          </div>
+        </div>
+  
         <div className="dayview-nav">
           <button className="nav-arrow" onClick={onPrev}>‹</button>
   
@@ -37,11 +44,9 @@ export default function DayViewHeader({ selectedDate, onPrev, onNext }) {
               </div>
             ))}
           </div>
-  
+
           <button className="nav-arrow" onClick={onNext}>›</button>
-          <div className="month-label">{monthLabel}</div>
         </div>
       </div>
     );
-  }
-  
+}
