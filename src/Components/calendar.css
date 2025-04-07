@@ -197,7 +197,9 @@ body{
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 20px;
-    border: none;
+    border: none !important;
+
+
   }
 
   /* Took out that annoying line around the table */
@@ -225,3 +227,72 @@ body{
   .fc-timeGridDay-view{
 
   }
+/* 
+  .fc-timegrid-slot-minor{
+      background-color: #f9faf9;
+      border: none;
+  } */
+
+  .fc-timegrid-slot {
+    background-color: #f9faf9 !important;
+    border-left: 3px solid black;
+  }
+
+.fc .fc-scrollgrid-section,
+.fc .fc-timegrid-axis,
+/* .fc .fc-timegrid-slot, */
+/* .fc .fc-timegrid-slot-minor, */
+.fc .fc-timegrid-slot-label,
+.fc .fc-col-header-cell {
+  border: none !important;
+}
+
+.fc .fc-timegrid-axis {
+  background: transparent;
+  border: none;
+  color: #7c7c7c;
+  font-size: 12px;
+}
+
+.fc-event {
+  background-color: #e5e4ff !important; /* soft purple */
+  color: #151c19 !important;
+  font-weight: 500;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: none !important;
+  box-shadow: none !important;
+}
+.fc .fc-event-main {
+  padding: 4px 0;
+}
+
+.fc .fc-timegrid-col-frame {
+}
+.fc-timegrid-slot-lane{
+  border-left: 2px solid #020202;
+}
+
+.fc .fc-timegrid-slot-minor {
+  border-top-style: none;
+  border-left-style: dashed;
+  border-right-style: dashed;
+  padding: 20px;
+}
+
+.fc .fc-timegrid-slot {
+  border-bottom: 0px;
+  height: 1.5em;
+  padding: 20px;
+  border-left-style: dashed;
+}
+
+/* .fc-media-screen{
+  margin-top: -40px;
+} */
+
+.fc .fc-timegrid-axis,
+.fc-scrollgrid-sync-inner
+{
+  display: none;
+}

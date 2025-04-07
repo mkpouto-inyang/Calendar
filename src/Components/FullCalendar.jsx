@@ -82,6 +82,7 @@ export default function MyCalendar() {
               initialView="timeGridDay"
               headerToolbar={{ left: "", center: "", right: "" }}
               events={currentEvents}
+              allDaySlot={false}
               dateClick={handleDateClick}
               datesSet={(arg) => {
                 setCurrentView(arg.view.type);

@@ -46,7 +46,7 @@ export default function DayViewHeader({ selectedDate, onPrev, onNext, onDateChan
           >
             {months.map((month) => (
               <option key={month.value} value={month.value}>
-                {month.label}
+                  {month.label}
               </option>
             ))}
           </select>
