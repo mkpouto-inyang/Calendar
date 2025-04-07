@@ -78,8 +78,7 @@ export default function MyCalendar() {
   return (
     <div className="calendar-container">
       <div
-        className="calendar-wrapper"
-        style={{ flex: 1, position: "relative" }}
+        className="fc-wrapper"
       >
         {currentView === "timeGridDay" ? (
           <>

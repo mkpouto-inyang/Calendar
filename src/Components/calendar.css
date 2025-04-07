@@ -178,6 +178,20 @@ body{
     left: 100px;
   }
 
+  .fc-wrapper {
+    background: #f9faf9;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    height: 95vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+  
+  .fc {
+    background: transparent;
+    padding: 0;
+  }
   /* Table */
   .fc-scrollgrid{
     margin-top: 20px;
@@ -199,5 +213,10 @@ body{
 
   .fc .fc-daygrid-day.fc-day-today {
     background: linear-gradient(120deg, #D1F68A, #F5FFA6);
+
+  }
+
+  /* The content area of day view */
+  .fc-timeGridDay-view{
 
   }

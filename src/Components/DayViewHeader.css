@@ -1,10 +1,18 @@
 /* 📁 src/styles/DayViewHeader.css */
-
+*{
+    box-sizing: border-box;
+}
 .dayview-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
     background-color: #f9faf9;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     padding: 20px 24px;
-    margin-bottom: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(6px);
   }
   
   .header-title {
@@ -64,9 +72,9 @@
   }
   
   .month-label {
-    position: absolute;
-    right: 10px;
     font-size: 16px;
     font-weight: 500;
     color: #6EA800;
   }
+
+ 
