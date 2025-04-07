@@ -99,7 +99,7 @@ body{
 }
 
 .fc-toolbar-title{
-    color: black;
+    color: #151C19;
     font-weight: 500;
 }
 
@@ -107,6 +107,17 @@ body{
     margin-top: 7px;
 }
 
+.fc .fc-button-primary {
+    background-color: red;
+    color: #333;
+  }
+
+/* .fc .fc-button-primary :hover {
+    background-color: red;
+    color: #333;
+  } */
+
+  
 .fc-event{
     background-color: rgb(37, 60, 205);
     color: white;
@@ -153,11 +164,8 @@ body{
 
   }
   .fc .fc-button-primary{
-    background-color: #F5F6F5;
-    color: #6EA800;
-    outline: none;
-    border: none;
-    padding: 0px;
+    background-color: #151C19;
+    color: white;
 }
 
 .custom-calendar-title {
@@ -170,12 +178,26 @@ body{
     left: 100px;
   }
 
+  /* Table */
   .fc-scrollgrid{
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 20px;
+    border: none;
   }
 
   .month-label{
     position: relative;
+  }
+
+  a{
+    color: #7A8682;
+  }
+  a:hover{
+    color: #6EA800;
+  }
+
+  .fc .fc-daygrid-day.fc-day-today {
+    background: linear-gradient(120deg, #D1F68A, #F5FFA6);
+
   }

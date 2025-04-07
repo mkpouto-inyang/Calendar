@@ -1,57 +1,72 @@
 /* 📁 src/styles/DayViewHeader.css */
 
-.day-header-container {
+.dayview-header {
+    background-color: #f9faf9;
+    border-radius: 20px;
+    padding: 20px 24px;
+    margin-bottom: 1rem;
+  }
+  
+  .header-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #202020;
+  }
+  
+  .dayview-nav {
     display: flex;
     align-items: center;
-    background-color: #f8f9f7;
-    padding: 16px;
-    border-radius: 16px;
     justify-content: space-between;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
     position: relative;
   }
   
-  .arrow-btn {
+  .nav-arrow {
     background: none;
     border: none;
-    font-size: 24px;
-    color: #6EA800;
+    font-size: 20px;
+    color: #2f2f2f;
     cursor: pointer;
+    padding: 6px;
+    margin: 0 10px;
   }
   
-  .day-buttons {
+  .dayview-days {
     display: flex;
-    gap: 10px;
+    gap: 24px;
     flex-grow: 1;
     justify-content: center;
   }
   
-  .day-btn {
-    background: transparent;
-    border: none;
-    padding: 10px 14px;
-    border-radius: 12px;
-    font-size: 14px;
-    color: #555;
+  .dayview-day {
     display: flex;
     flex-direction: column;
     align-items: center;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+    font-size: 14px;
+    color: #7c7c7c;
+    padding: 6px 10px;
+    border-radius: 12px;
   }
   
-  .day-btn.selected {
-    background-color: #e9fcb4;
-    color: black;
-    font-weight: bold;
+  .dayview-day.selected {
+    background: linear-gradient(135deg, #D1F68A, #F5FFA6);
+    color: #000;
+    font-weight: 600;
+  }
+  
+  .day-label {
+    font-size: 14px;
+  }
+  
+  .day-number {
+    font-size: 16px;
+    font-weight: 500;
   }
   
   .month-label {
     position: absolute;
-    right: 20px;
+    right: 10px;
     font-size: 16px;
-    color: #6EA800;
     font-weight: 500;
+    color: #6EA800;
   }
-  
