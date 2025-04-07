@@ -1,0 +1,57 @@
+/* 📁 src/styles/DayViewHeader.css */
+
+.day-header-container {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9f7;
+    padding: 16px;
+    border-radius: 16px;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  
+  .arrow-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #6EA800;
+    cursor: pointer;
+  }
+  
+  .day-buttons {
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+    justify-content: center;
+  }
+  
+  .day-btn {
+    background: transparent;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .day-btn.selected {
+    background-color: #e9fcb4;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .month-label {
+    position: absolute;
+    right: 20px;
+    font-size: 16px;
+    color: #6EA800;
+    font-weight: 500;
+  }
+  
