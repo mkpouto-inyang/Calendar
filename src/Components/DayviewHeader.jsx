@@ -1,4 +1,4 @@
-import './DayViewHeader.css';
+import '../Styles/DayViewHeader.css';
 
 export default function DayViewHeader({ selectedDate, onPrev, onNext, onDateChange }) {
   if (!selectedDate) return null;

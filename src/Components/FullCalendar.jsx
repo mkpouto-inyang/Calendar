@@ -1,4 +1,3 @@
-// 📁 src/components/MyCalendar.jsx
 import React, { useState, useEffect, useRef } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -6,6 +5,7 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import Modal from "./Modal";
 import DayViewHeader from "./DayviewHeader";
+import "../Styles/calendar.css"
 
 export default function MyCalendar() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -17,12 +17,31 @@ export default function MyCalendar() {
 
   const calendarRef = useRef(null);
 
+  const FAKE_EVENTS = [
+    {
+      id: "1",
+      title: "Team Sync",
+      start: new Date("2025-04-07T10:30:00"),
+      end: new Date("2025-04-07T11:30:00"),
+    },
+    {
+      id: "2",
+      title: "Design Review",
+      start: new Date("2025-04-08T13:00:00"),
+      end: new Date("2025-04-08T14:00:00"),
+    },
+  ];
+
   useEffect(() => {
     const savedEvents = localStorage.getItem("myEvents");
-    if (savedEvents) {
-      setCurrentEvents(JSON.parse(savedEvents));
-    }
+    const parsedSavedEvents = savedEvents ? JSON.parse(savedEvents) : [];
+  
+    // Combine fake events with saved ones
+    const combinedEvents = [...FAKE_EVENTS, ...parsedSavedEvents];
+  
+    setCurrentEvents(combinedEvents);
   }, []);
+  
 
   useEffect(() => {
     localStorage.setItem("myEvents", JSON.stringify(currentEvents));

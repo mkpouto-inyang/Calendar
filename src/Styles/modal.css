@@ -1,0 +1,81 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .modal h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #333;
+    margin-top: 0px;
+  }
+  
+  .modal input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 95%;
+    margin-bottom: 20px;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .modal p{
+    color: black;
+    margin-bottom: 8px;
+  }
+
+  .modal-buttons button {
+    background-color: rgb(29, 29, 66);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-left: 12px;
+  }
+  
+  .modal-buttons button:hover {
+    background-color: #1e5f02;
+  }
+  
+  .modal-buttons button:first-child {
+    background-color: #ccc;
+  }
+  
+  .modal-buttons button:first-child:hover {
+    background-color: #aaa;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+ 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './calendar.css'
+import '../Styles/modal.css'
 
 const Modal = ({ isOpen, onClose, onAddEvent, date }) => {
   const [title, setTitle] = useState(""); 
